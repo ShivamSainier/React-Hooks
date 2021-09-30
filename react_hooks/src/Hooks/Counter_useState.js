@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 
 function Counter_useState() {
     const [state,setState]=useState(0)
-
-   
     return (
         <div>
             <h1>{state}</h1>
