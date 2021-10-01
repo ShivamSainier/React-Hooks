@@ -1,14 +1,21 @@
 import React, { useState,useEffect } from 'react'
 
 function UseEffect() {
+    const [state,setState]=useState(0)
+
+    const tick=()=>{
+        setState(state+1)
+    }
     useEffect(() => {
-        alert("useEffect Runs after every Render !")
-    })
-    const [data,setData]=useState(0)
+     const intervel=setInterval(tick,1000)  
+     return ()=>{
+         clearInterval(intervel)
+     } 
+    },[state] )
+   
     return (
         <div>
-            <button onClick={()=>{setData(data+2)}}>Click me</button>
-            <h1>{data}</h1>
+            <h1>{state}</h1>
         </div>
     )
 }
