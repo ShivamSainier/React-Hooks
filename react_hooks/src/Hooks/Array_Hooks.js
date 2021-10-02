@@ -4,8 +4,6 @@ import React, { useState,useEffect } from 'react'
 function Array_Hooks() {
     const [item,setItem]=useState([])
     const [data,setData]=useState(1)
-    
-
     function buttonHendler(data){
         setItem([...item,data])
     }

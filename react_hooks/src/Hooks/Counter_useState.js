@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 
 function Counter_useState() {
-    const [state,setState]=useState(0)
+    const [state,setState]=useState({counter:0})
+    const Counter=(value)=>{
+        setState({
+            counter:state.counter+value
+        })
+    }
     return (
         <div>
-            <h1>{state}</h1>
-            <button onClick={()=>{setState(state+1)}}>Increment</button>
-            <button onClick={()=>{setState(state-1)}}>Deccrement</button>
-            <button onClick={()=>{setState(prev=>prev+5)}}>Increment by 5</button>
+            <h1>{state.counter}</h1>
+            <button onClick={()=>{Counter(1)}}>Increment by 1</button>
+            <button onClick={()=>{Counter(2)}}>Increment by 2</button>
+            <button onClick={()=>{Counter(3)}}>Increment by 3</button>
+            <button onClick={()=>{Counter(4)}}>Increment by 4</button>
+           
             
         </div>
     )

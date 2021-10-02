@@ -9,7 +9,7 @@ function UseEffect() {
     useEffect(() => {
      const intervel=setInterval(tick,1000)  
      return ()=>{
-         clearInterval(intervel)
+         clearInterval(intervel)  
      } 
     },[state] )
    

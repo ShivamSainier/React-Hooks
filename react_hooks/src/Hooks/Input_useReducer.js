@@ -6,7 +6,7 @@ function Input_useReducer() {
         return state
         
     }
-    const [value,setValue]=useReducer(reducer,"helo")
+    const [value,setValue]=useReducer(reducer,"")
     console.log(value)
     return (
         <div>
